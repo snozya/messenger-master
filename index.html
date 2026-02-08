@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master Messenger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <div>
+            <h1>Master Messenger</h1>
+            <p>Ваш безопасный мессенджер</p>
+          </div>
+          <button id="themeToggle" title="Сменить тему">🌓</button>
+        </header>
+
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Поиск чатов" />
+        </div>
+
+        <ul id="chatList" class="chat-list"></ul>
+      </aside>
+
+      <main class="chat-area">
+        <header class="chat-header" id="chatHeader">
+          <h2>Выберите чат</h2>
+          <span></span>
+        </header>
+
+        <section class="messages" id="messages"></section>
+
+        <form class="composer" id="composer">
+          <input
+            id="messageInput"
+            type="text"
+            placeholder="Введите сообщение..."
+            autocomplete="off"
+          />
+          <button type="submit">Отправить</button>
+        </form>
+      </main>
+    </div>
+
+    <template id="chatItemTemplate">
+      <li class="chat-item">
+        <div class="avatar"></div>
+        <div class="chat-meta">
+          <div class="chat-top">
+            <strong class="chat-name"></strong>
+            <time class="chat-time"></time>
+          </div>
+          <p class="chat-preview"></p>
+        </div>
+      </li>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
